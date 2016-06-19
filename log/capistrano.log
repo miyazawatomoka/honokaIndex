@@ -1,0 +1,89 @@
+# Logfile created on 2016-06-19 20:48:44 +0800 by logger.rb/44203
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-06-19 20:48:44 +0800 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [91fd8858] Running /usr/bin/env mkdir -p /tmp/honokaIndex/ as deploy@honoka.cc
+ DEBUG [91fd8858] Command: /usr/bin/env mkdir -p /tmp/honokaIndex/
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-06-19 20:50:52 +0800 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [850c08aa] Running /usr/bin/env mkdir -p /tmp/honokaIndex/ as deploy@honoka.cc
+ DEBUG [850c08aa] Command: /usr/bin/env mkdir -p /tmp/honokaIndex/
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-06-19 20:52:25 +0800 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [4b1c5b92] Running /usr/bin/env mkdir -p /tmp/honokaIndex/ as deploy@138.128.220.237
+ DEBUG [4b1c5b92] Command: /usr/bin/env mkdir -p /tmp/honokaIndex/
+  INFO [4b1c5b92] Finished in 7.327 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/honokaIndex/git-ssh.sh 0.0%
+  INFO Uploading /tmp/honokaIndex/git-ssh.sh 100.0%
+  INFO [317d0fee] Running /usr/bin/env chmod +rx /tmp/honokaIndex/git-ssh.sh as deploy@138.128.220.237
+ DEBUG [317d0fee] Command: /usr/bin/env chmod +rx /tmp/honokaIndex/git-ssh.sh
+  INFO [317d0fee] Finished in 0.775 seconds with exit status 0 (successful).
+  INFO [56bbe34e] Running /usr/bin/env git ls-remote --heads git@github.com:miyazawatomoka/honokaIndex.git as deploy@138.128.220.237
+ DEBUG [56bbe34e] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/honokaIndex/git-ssh.sh" ; /usr/bin/env git ls-remote --heads git@github.com:miyazawatomoka/honokaIndex.git )
+ DEBUG [56bbe34e] 	a415d4c0ad23c6de8460eccbbd35ab3d576e2c6d	refs/heads/master
+  INFO [56bbe34e] Finished in 2.455 seconds with exit status 0 (successful).
+  INFO [0869abcf] Running /usr/bin/env mkdir -p /var/www/honokaIndex/shared /var/www/honokaIndex/releases as deploy@138.128.220.237
+ DEBUG [0869abcf] Command: /usr/bin/env mkdir -p /var/www/honokaIndex/shared /var/www/honokaIndex/releases
+  INFO [0869abcf] Finished in 0.336 seconds with exit status 0 (successful).
+ DEBUG [2fc1bb83] Running [ -f /var/www/honokaIndex/current/REVISION ] as deploy@138.128.220.237
+ DEBUG [2fc1bb83] Command: [ -f /var/www/honokaIndex/current/REVISION ]
+ DEBUG [2fc1bb83] Finished in 0.342 seconds with exit status 0 (successful).
+ DEBUG [55530d64] Running /usr/bin/env cat /var/www/honokaIndex/current/REVISION 2>/dev/null as deploy@138.128.220.237
+ DEBUG [55530d64] Command: /usr/bin/env cat /var/www/honokaIndex/current/REVISION 2>/dev/null
+ DEBUG [55530d64] 	e618b715f18d0d9b31b1954d1011de473403d4a1
+ DEBUG [55530d64] Finished in 1.880 seconds with exit status 0 (successful).
+ DEBUG [99c445be] Running [ -f /var/www/honokaIndex/repo/HEAD ] as deploy@138.128.220.237
+ DEBUG [99c445be] Command: [ -f /var/www/honokaIndex/repo/HEAD ]
+ DEBUG [99c445be] Finished in 0.453 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/honokaIndex/repo
+ DEBUG [baa42854] Running if test ! -d /var/www/honokaIndex/repo; then echo "Directory does not exist '/var/www/honokaIndex/repo'" 1>&2; false; fi as deploy@138.128.220.237
+ DEBUG [baa42854] Command: if test ! -d /var/www/honokaIndex/repo; then echo "Directory does not exist '/var/www/honokaIndex/repo'" 1>&2; false; fi
+ DEBUG [baa42854] Finished in 1.989 seconds with exit status 0 (successful).
+  INFO [7f3ef924] Running /usr/bin/env git remote update --prune as deploy@138.128.220.237
+ DEBUG [7f3ef924] Command: cd /var/www/honokaIndex/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/honokaIndex/git-ssh.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [7f3ef924] 	Fetching origin
+ DEBUG [7f3ef924] 	warning: no common commits
+ DEBUG [7f3ef924] 	From github.com:miyazawatomoka/honokaIndex
+ + e618b71...a415d4c master     -> master  (forced update)
+ x [deleted]         (none)     -> refs/pull/1/head
+  INFO [7f3ef924] Finished in 2.214 seconds with exit status 0 (successful).
+ DEBUG [9e73f315] Running if test ! -d /var/www/honokaIndex/repo; then echo "Directory does not exist '/var/www/honokaIndex/repo'" 1>&2; false; fi as deploy@138.128.220.237
+ DEBUG [9e73f315] Command: if test ! -d /var/www/honokaIndex/repo; then echo "Directory does not exist '/var/www/honokaIndex/repo'" 1>&2; false; fi
+ DEBUG [9e73f315] Finished in 0.555 seconds with exit status 0 (successful).
+  INFO [e8fd5351] Running /usr/bin/env mkdir -p /var/www/honokaIndex/releases/20160619125241 as deploy@138.128.220.237
+ DEBUG [e8fd5351] Command: cd /var/www/honokaIndex/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/honokaIndex/git-ssh.sh" ; /usr/bin/env mkdir -p /var/www/honokaIndex/releases/20160619125241 )
+  INFO [e8fd5351] Finished in 1.036 seconds with exit status 0 (successful).
+  INFO [bf314fa8] Running /usr/bin/env git archive master | tar -x -f - -C /var/www/honokaIndex/releases/20160619125241 as deploy@138.128.220.237
+ DEBUG [bf314fa8] Command: cd /var/www/honokaIndex/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/honokaIndex/git-ssh.sh" ; /usr/bin/env git archive master | tar -x -f - -C /var/www/honokaIndex/releases/20160619125241 )
+  INFO [bf314fa8] Finished in 0.581 seconds with exit status 0 (successful).
+ DEBUG [0a69c255] Running if test ! -d /var/www/honokaIndex/repo; then echo "Directory does not exist '/var/www/honokaIndex/repo'" 1>&2; false; fi as deploy@138.128.220.237
+ DEBUG [0a69c255] Command: if test ! -d /var/www/honokaIndex/repo; then echo "Directory does not exist '/var/www/honokaIndex/repo'" 1>&2; false; fi
+ DEBUG [0a69c255] Finished in 0.560 seconds with exit status 0 (successful).
+ DEBUG [7fa7bc3d] Running /usr/bin/env git rev-list --max-count=1 master as deploy@138.128.220.237
+ DEBUG [7fa7bc3d] Command: cd /var/www/honokaIndex/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/honokaIndex/git-ssh.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [7fa7bc3d] 	a415d4c0ad23c6de8460eccbbd35ab3d576e2c6d
+ DEBUG [7fa7bc3d] Finished in 0.557 seconds with exit status 0 (successful).
+ DEBUG [cc5cb596] Running if test ! -d /var/www/honokaIndex/releases/20160619125241; then echo "Directory does not exist '/var/www/honokaIndex/releases/20160619125241'" 1>&2; false; fi as deploy@138.128.220.237
+ DEBUG [cc5cb596] Command: if test ! -d /var/www/honokaIndex/releases/20160619125241; then echo "Directory does not exist '/var/www/honokaIndex/releases/20160619125241'" 1>&2; false; fi
+ DEBUG [cc5cb596] Finished in 0.561 seconds with exit status 0 (successful).
+  INFO [b5199aaf] Running /usr/bin/env echo "a415d4c0ad23c6de8460eccbbd35ab3d576e2c6d" >> REVISION as deploy@138.128.220.237
+ DEBUG [b5199aaf] Command: cd /var/www/honokaIndex/releases/20160619125241 && /usr/bin/env echo "a415d4c0ad23c6de8460eccbbd35ab3d576e2c6d" >> REVISION
+  INFO [b5199aaf] Finished in 0.560 seconds with exit status 0 (successful).
+  INFO [f62a0c0a] Running /usr/bin/env ln -s /var/www/honokaIndex/releases/20160619125241 /var/www/honokaIndex/releases/current as deploy@138.128.220.237
+ DEBUG [f62a0c0a] Command: /usr/bin/env ln -s /var/www/honokaIndex/releases/20160619125241 /var/www/honokaIndex/releases/current
+  INFO [f62a0c0a] Finished in 0.555 seconds with exit status 0 (successful).
+  INFO [ec9fec97] Running /usr/bin/env mv /var/www/honokaIndex/releases/current /var/www/honokaIndex as deploy@138.128.220.237
+ DEBUG [ec9fec97] Command: /usr/bin/env mv /var/www/honokaIndex/releases/current /var/www/honokaIndex
+  INFO [ec9fec97] Finished in 0.563 seconds with exit status 0 (successful).
+ DEBUG [664dbab3] Running /usr/bin/env ls -xtr /var/www/honokaIndex/releases as deploy@138.128.220.237
+ DEBUG [664dbab3] Command: /usr/bin/env ls -xtr /var/www/honokaIndex/releases
+ DEBUG [664dbab3] 	20160605083717	20160605084335	20160605084655	20160619125241
+ DEBUG [664dbab3] Finished in 0.578 seconds with exit status 0 (successful).
+ DEBUG [e4b91e3b] Running if test ! -d /var/www/honokaIndex/releases; then echo "Directory does not exist '/var/www/honokaIndex/releases'" 1>&2; false; fi as deploy@138.128.220.237
+ DEBUG [e4b91e3b] Command: if test ! -d /var/www/honokaIndex/releases; then echo "Directory does not exist '/var/www/honokaIndex/releases'" 1>&2; false; fi
+ DEBUG [e4b91e3b] Finished in 1.052 seconds with exit status 0 (successful).
+  INFO [eb8fab84] Running /usr/bin/env echo "Branch master (at a415d4c0ad23c6de8460eccbbd35ab3d576e2c6d) deployed as release 20160619125241 by Tomoka" >> /var/www/honokaIndex/revisions.log as deploy@138.128.220.237
+ DEBUG [eb8fab84] Command: cd /var/www/honokaIndex/releases && /usr/bin/env echo "Branch master (at a415d4c0ad23c6de8460eccbbd35ab3d576e2c6d) deployed as release 20160619125241 by Tomoka" >> /var/www/honokaIndex/revisions.log
+  INFO [eb8fab84] Finished in 0.560 seconds with exit status 0 (successful).
