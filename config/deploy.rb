@@ -38,6 +38,7 @@ set :deploy_to, '/var/www/honokaIndex'
 set :keep_releases, 5
 
 
+
 namespace :deploy do
 
   after :restart, :clear_cache do
@@ -48,5 +49,27 @@ namespace :deploy do
       # end
     end
   end
+
+  # 定义一些task
+  desc "composer update"
+  task :composer_update do
+    on roles(:all) do |host|
+      within release_path do
+        execute "cd #{release_path}"
+        execute "composer update"
+        info "composer update"
+      end
+    end
+  end
+
+  desc "change directory permission"
+  task :change_permission do
+    on roles(:all) do |host|
+      within release_path do
+        execute :chmod, "-R 777 storage"
+      end
+    end
+  end
+
 
 end
