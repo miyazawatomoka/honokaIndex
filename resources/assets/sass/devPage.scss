@@ -1,0 +1,90 @@
+body {
+  background-image: url('{{ asset('images/ll.jpg') }}');
+  background-size: cover;
+}
+
+.player {
+  display: none;
+  width: 330px;
+  height: 450px;
+  position: absolute;
+  bottom: 65px;
+  left: 20%;
+}
+
+.music-player {
+  position: fixed;
+  height: 550px;
+  width: 400px;
+  bottom: 0px;
+}
+
+.music-button {
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  left: 5%;
+  width: 60px;
+  height: 60px;
+  color: #FFF;
+  font-size: 38px;
+  background-color: #FF6100;
+  border-radius: 30px;
+  line-height: 60px;
+  z-index: -1;
+}
+
+.music-button:hover {
+  box-shadow: 0 0 5px 3px #e0b91f;
+}
+
+.music-button > span {
+  margin-left: 8px;
+  margin-top: 10px;
+}
+
+.footbar {
+  position: fixed;
+  bottom: 0px;
+  z-index: -2;
+  width: 100%;
+  height: 80px;
+  opacity: 0.025;
+  background-color: black;
+  transition: opacity 1s;
+}
+
+.footbar:hover {
+  transition: opacity 2s;
+  opacity: 0.7;
+}
+
+@keyframes footbar-hover {
+  from {
+    opacity: 0.1
+  }
+  to {
+    opacity: 0.7
+  }
+}
+.us {
+  position: absolute;
+  top: 8px;
+  left: 45%;
+  color: #FF6100;
+  text-shadow: 0px 0px 3px #e0b91f;
+}
+
+.us > span {
+  display: block;
+}
+
+.honokacc {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+}
+
+.honokacc span {
+  display: block;
+}
