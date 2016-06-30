@@ -153,10 +153,10 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        HomokaIndex\Providers\AppServiceProvider::class,
+        HomokaIndex\Providers\AuthServiceProvider::class,
+        HomokaIndex\Providers\EventServiceProvider::class,
+        HomokaIndex\Providers\RouteServiceProvider::class,
 
     ],
 

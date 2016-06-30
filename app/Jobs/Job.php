@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Jobs;
+namespace HomokaIndex\Jobs;
 
 use Illuminate\Bus\Queueable;
 

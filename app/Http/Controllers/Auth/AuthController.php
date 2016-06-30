@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace HomokaIndex\Http\Controllers\Auth;
 
-use App\User;
+use HomokaIndex\User;
 use Validator;
-use App\Http\Controllers\Controller;
+use HomokaIndex\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
