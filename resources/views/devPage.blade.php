@@ -24,7 +24,7 @@
         </div>
         <div class="honokacc">
           <span>honoka.cc 施工中</span>
-          <span>Email: miyazawa_tomoka@yahoo.co.jp</span>
+          <span>Email: honoka@honoka.cc</span>
         </div>
       </div>
     </div>
