@@ -28,6 +28,7 @@ GEM
       net-ssh (>= 2.8.0)
 
 PLATFORMS
+  ruby
   x64-mingw32
 
 DEPENDENCIES
@@ -35,4 +36,4 @@ DEPENDENCIES
   capistrano-laravel
 
 BUNDLED WITH
-   1.12.5
+   1.13.5
