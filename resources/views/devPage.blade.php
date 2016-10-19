@@ -23,7 +23,7 @@
             <span>那么一定是橙色吧...</span>
         </div>
         <div class="honokacc">
-          <span>honoka.cc 施工中</span>
+          <span>honoka.cc</span>
           <span>Email: honoka@honoka.cc</span>
         </div>
       </div>
