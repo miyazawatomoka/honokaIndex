@@ -46,14 +46,11 @@ server '138.128.220.237', user: 'deploy', roles: %w{web}
 #    forward_agent: false,
 #    auth_methods: %w(password)
 #  }
-
- set :ssh_options, {
-   keys: %w(/home/rlisowski/.ssh/id_rsa),
-   forward_agent: false,
-   auth_methods: %w(password)
- }
-
-
+set :ssh_options, {
+  keys: %w(/home/rlisowski/.ssh/id_rsa),
+  forward_agent: false,
+  auth_methods: %w(password)
+}
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------

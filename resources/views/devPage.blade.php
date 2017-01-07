@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Honoka</title>
     <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet"  href="{{ asset('assets/css/devPage.css') }}">
+    <link rel="stylesheet"  href="{{ asset('/css/devPage.css') }}">
   </head>
   <body>
     <div class="bg">
@@ -30,6 +30,6 @@
     </div>
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="{{ asset('assets/javascript/devPage.js') }}"></script>
+    <script src="{{ asset('/js/devPage.js') }}"></script>
   </body>
 </html>

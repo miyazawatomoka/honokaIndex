@@ -1,6 +1,6 @@
 <?php
 
-namespace HomokaIndex\Providers;
+namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
