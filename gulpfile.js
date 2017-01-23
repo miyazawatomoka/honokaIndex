@@ -15,5 +15,12 @@ require('laravel-elixir-vue-2');
 
 elixir((mix) => {
     mix.sass('app.scss')
-       .webpack('app.js');
+       .webpack([
+         'app.js',
+       ],'public/js/app.js')
+       .scripts([
+         '../../../bower_components/semantic/dist/semantic.min.js',
+         '../../vendor/webuploader/webuploader.html5only.min.js',
+         'tsuinteru.js'
+       ],'public/js/vendor.js');
 });
