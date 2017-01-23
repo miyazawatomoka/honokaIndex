@@ -16,3 +16,9 @@ use Illuminate\Http\Request;
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:api');
+
+Route::group(['namespace' => 'api'], function(){
+    Route::group(['prefix' => 'v1', 'namespace' => 'v1'], function(){
+      Route::post('tsuinteru', 'TsuinteruController@getTsuinteruProbability');
+    });
+});
