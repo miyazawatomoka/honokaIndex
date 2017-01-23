@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('devPage');
 });
+
+Route::group(['prefix' => 'tsuinteru'], function () {
+    Route::get('users', function () {
+        // 匹配 "/admin/users" URL
+    });
+});
