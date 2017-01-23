@@ -5,3 +5,5 @@ Homestead.yaml
 Homestead.json
 .env
 /log
+/bower_components
+*.log
