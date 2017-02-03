@@ -15,6 +15,6 @@ Route::get('/', function () {
     return view('devPage');
 });
 
-Route::get('/tsuinteru', function(){
-    return view('tsuinteru');
-});
+// Route::get('/tsuinteru', function(){
+//     return view('tsuinteru');
+// });
