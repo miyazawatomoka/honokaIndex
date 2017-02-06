@@ -18,3 +18,10 @@ Route::get('/', function () {
 // Route::get('/tsuinteru', function(){
 //     return view('tsuinteru');
 // });
+Route::group(['prefix' => 'lab'],function() {
+    Route::get('/recognize', 'RecognizeController@index');
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');

@@ -1,0 +1,21 @@
+.auth-container {
+  width: 320px;
+  > form > div {
+    display: block;
+    width: 320px;
+    margin-bottom: 18px;
+  }
+  .auth-button input {
+    width: 320px;
+  }
+  .form-logo {
+    margin: 0 auto;
+    width: 200px;
+    text-align: center;
+    margin-bottom: 18px;
+    font: bold 22px '黑体','微软雅黑';
+  }
+  margin: 0 auto;
+  position: relative;
+	top: 150px;
+}

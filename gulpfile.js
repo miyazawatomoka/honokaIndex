@@ -20,7 +20,7 @@ elixir((mix) => {
        ],'public/js/app.js')
        .scripts([
          '../../../bower_components/semantic/dist/semantic.min.js',
-         '../../vendor/webuploader/webuploader.html5only.min.js',
-         'tsuinteru.js'
+         'tsuinteru.js',
+         'recognize.js'
        ],'public/js/vendor.js');
 });

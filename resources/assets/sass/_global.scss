@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: green;
+}
+.app-header {
+  height: 42px;
+  width: 100%;
+}
+
+.app-header .mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 42px;
+  background-color: rgba(255, 255, 255, 0.4);
+  z-index: -1;
+}
+
+.app-header .uns-box {
+  float: right;
+  position: relative;
+  right: 10%;
+  font-size: 13px;
+  .avatar-img {
+    height: 36px;
+    width: 36px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+  .avatar-img:hover {
+    height: 42px;
+    width: 42px;
+    margin: 0;
+    position: relative;
+    left: 3px;
+  }
+  ul {
+    list-style: none;
+    li {
+      float: left;
+      height: 42px;
+      a {
+        text-align: center;
+        height: 42px;
+        vertical-align: middle;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        display: list-item;
+        height: 100%;
+        color: #000;
+      }
+      :hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+    }
+  }
+}
+
+.app-header .nav {
+  position: relative;
+  left: 10%;
+  font-size: 13px;
+  ul {
+    list-style: none;
+    li {
+      float: left;
+      height: 42px;
+      a {
+        text-align: center;
+        height: 42px;
+        vertical-align: middle;
+        padding: 14px;
+        display: list-item;
+        color: #000;
+        height: 100%;
+      }
+      :hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+    }
+  }
+}
