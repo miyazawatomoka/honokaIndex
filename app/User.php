@@ -30,7 +30,7 @@ class User extends Authenticatable
 
     public function getAvatar() {
       $avatarPath = 'avatar/'.$this->avatar;
-      if (Storage::exists($avatarPath)) {
+      if ($this->avatar && Storage::exists($avatarPath)) {
         $url = Storage::url($avatarPath);
       }
       else {
