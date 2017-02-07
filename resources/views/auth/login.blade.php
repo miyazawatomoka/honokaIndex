@@ -11,7 +11,7 @@
          <input placeholder="请输入邮箱地址" type="email" name="email" value="{{ old('email') }}" required autofocus>
        </div>
        <div class="ui input">
-         <input placeholder="请输入密码" type="password" name="password">
+         <input placeholder="请输入密码" type="password" name="password" required>
        </div>
        <div class="ui input">
          <div class="ui checkbox">
