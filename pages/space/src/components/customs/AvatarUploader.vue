@@ -4,12 +4,19 @@
       <div>点击上传</div>
       <div>新头像</div>
     </div>
-    <input type="file" id="fileSelect" ref="avatarSelect" v-on:change="handleChange" name="avatar">
-    <img src="../../assets/normal.jpeg" ref="avatarImg"></img>
+    <input type="file" id="fileSelect" ref="avatarSelect" v-on:change="handleChange" name="avatar"
+           accept="image/gif, image/png, image/jpeg, image/bmp, image/webp">
+    <img :src="src" ref="avatarImg"></img>
   </div>
 </template>
 <script>
+  import normal from '../../assets/normal.jpeg'
   export default {
+    data() {
+      return {
+        src: normal
+      }
+    },
     methods: {
       handleClick() {
         var input = this.$refs.avatarSelect;
@@ -28,9 +35,8 @@
         var reader = new FileReader();
         reader.readAsDataURL(inputFile);
         reader.onload = function(e){
-            that.$refs.avatarImg.src = this.result;
+            that.src = this.result;
         }
-        window.test = this;
       }
     }
   }
