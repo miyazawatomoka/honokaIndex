@@ -4,7 +4,7 @@
       <div>点击上传</div>
       <div>新头像</div>
     </div>
-    <input type="file" id="fileSelect" ref="avatarSelect" v-on:change="handleChange">
+    <input type="file" id="fileSelect" ref="avatarSelect" v-on:change="handleChange" name="avatar">
     <img src="../../assets/normal.jpeg" ref="avatarImg"></img>
   </div>
 </template>
