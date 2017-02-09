@@ -14,7 +14,8 @@
   export default {
     data() {
       return {
-        src: normal
+        src: normal,
+        file: ''
       }
     },
     methods: {
@@ -28,6 +29,7 @@
         if (!inputFile) {
           return false;
         }
+        this.file = inputFile;
         if(!/image\/\w+/.test(inputFile.type)) {
           alert("need image file");
           return false;

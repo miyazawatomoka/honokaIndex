@@ -11,9 +11,10 @@ class CreateFiguresTable extends Migration
       Schema::create('figures', function (Blueprint $table) {
           $table->increments('id');
           $table->string('chinese_name');
-          $table->string('english_name'); $table->index('english_name');
+          $table->string('english_name')->unique();
           $table->string('japanese_name');
           $table->string('avatar');
+          $table->integer('status');
           $table->timestamps();
       });
     }

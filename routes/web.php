@@ -19,9 +19,13 @@ Route::get('/', function () {
 //     return view('tsuinteru');
 // });
 Route::group(['prefix' => 'lab'],function() {
-    Route::get('/recognize', 'RecognizeController@index');
+  Route::group(['prefix' => 'recognize'], function () {
+    Route::get('/', 'RecognizeController@index');
+    Route::resource('figures', 'FigureController');
+  });
 });
 
+Route::resource('images', 'ImageController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');

@@ -23,7 +23,8 @@ export default {
   data() {
     return {
       fileList: [],
-      imageBlobList: []
+      imageBlobList: [],
+      serversFileNameList: [],
     }
   },
   props: ['action'],
@@ -35,6 +36,7 @@ export default {
       console.log(file, fileList);
     },
     handleSuccess(response, file, fileList) {
+      this.serversFileNameList.push(response.filename)
       this.imageBlobList.push(file.url);
     }
   },
