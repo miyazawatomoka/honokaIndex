@@ -1,5 +1,5 @@
 GEM
-  remote: http://gems.ruby-china.org/
+  remote: http://gems.ruby-china.com/
   specs:
     airbrussh (1.1.2)
       sshkit (>= 1.6.1, != 1.7.0)
@@ -29,10 +29,11 @@ GEM
 
 PLATFORMS
   ruby
+  x86-mingw32
 
 DEPENDENCIES
   capistrano
   capistrano-laravel
 
 BUNDLED WITH
-   1.13.5
+   2.0.2
